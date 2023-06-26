@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { Hide } from "./hide";
 import userEvent from "@testing-library/user-event";
+
 describe("hide", () => {
   it("shows div on hover", () => {
     render(<Hide />);
@@ -13,6 +14,7 @@ describe("hide", () => {
     expect(first).toBeVisible();
 
     userEvent.hover(container);
+
     expect(second).toBeVisible();
   });
 });
